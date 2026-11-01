@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Medical Report Analyzer AI</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <h1>🏥 Medical Report Analyzer AI</h1>
+
+        <p>
+            Upload your medical report and ask unlimited questions
+        </p>
+
+    </header>
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="container">
+
+        <!-- LEFT PANEL -->
+
+        <div class="left-panel">
+
+            <h2>Upload Report</h2>
+
+            <input
+                type="file"
+                id="pdfFile"
+                accept=".pdf">
+
+            <button id="uploadBtn">
+
+                Upload PDF
+
+            </button>
+
+            <hr>
+
+            <button id="summaryBtn">
+
+                Report Summary
+
+            </button>
+
+            <button id="insightsBtn">
+
+                Medical Insights
+
+            </button>
+
+            <button id="clearBtn">
+
+                Clear Chat
+
+            </button>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right-panel">
+
+            <!-- CHAT WINDOW -->
+
+            <div
+                id="chatWindow"
+                class="chat-window">
+
+                <div class="ai-message">
+
+                    Hello 👋
+
+                    Upload your report to begin.
+
+                </div>
+
+            </div>
+
+            <!-- INPUT AREA -->
+
+            <div class="input-area">
+
+                <input
+
+                    type="text"
+
+                    id="question"
+
+                    placeholder="Ask anything about your report..."
+
+                >
+
+                <button id="sendBtn">
+
+                    Send
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JS -->
+
+    <script
+        src="{{ url_for('static',
+        filename='js/script.js') }}">
+    </script>
+
+</body>
+
+</html>
